@@ -7,7 +7,7 @@ git submodule update --init --recursive
 ```
 
 # Requirements
-- .Net 6.0
+- DotNet 6.0
 
 # Running the code
 To compile the code, run the following command:
