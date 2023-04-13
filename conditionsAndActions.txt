@@ -1,0 +1,44 @@
+CONDITIONS:
+-----------------------
+self.HP(unit_id)
+self.bombsInInventory(unit_id)
+self.isInvulnerable(unit_id)
+self.isBombLeft (unit_id)
+self.isBombRight(unit_id)
+self.isBombUp(unit_id)
+self.isBombDown(unit_id)
+self.isAmmoLeft(unit_id)
+self.isAmmoRight(unit_id)
+self.isAmmoUp(unit_id)
+self.isAmmoDown(unit_id)
+self.isPowerUpLeft(unit_id)
+self.isPowerUpRight(unit_id)
+self.isPowerUpUp(unit_id)
+self.isPowerUpDown(unit_id)
+self.isEnemyInBlastRadius(my_agent_id,unit_id)
+self.enemiesAround
+
+(enemiesAround,0.5,(isBombLeft,0.6,right,bomb),(isAmmoLeft,0.3,left,detonate))
+
+FUTURE:
+RUN AWAY FROM THE BORDER FIRES (?)
+RUN AWAY FROM BLASTS (they last for some ticks)
+DETECT WOOD BOXES (they might contain power ups)
+RIGHT NOW WE ARE NOT DETECTING IF THERE ARE ANY OBSTACLES WHEN CALCULATING DISTANCES
+
+
+FITNESS:
+---------------------------
+#Victories
+#Turns to win
+#Turns to lose
+
+
+ACTIONS:
+----------------------
+up
+down
+left
+right
+bomb
+detonate

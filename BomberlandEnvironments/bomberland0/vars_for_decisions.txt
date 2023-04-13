@@ -1,0 +1,49 @@
+CONDITIONS:
+-----------------------
+HP
+bombsInInventory(unit_id)  //add (unit_id) to all conditional variables excecpt isEnemyInBlastRadius
+isInvulnerable
+isBombLeft  #better to separate or to join them all in radius like trig circum ?
+isBombRight
+isBombUp
+isBombDown
+-----
+
+isAmmoLeft
+isAmmoRight
+isAmmoUp
+isAmmoDown
+
+---------
+
+isPowerUpLeft
+isPowerUpRight
+isPowerUpUp
+isPowerDown
+
+-------------
+
+isEnemyInBlastRadius(my_agent_id,unit_id) (percentage of enemy units in blast radius?)
+
+FUTURE:
+RUN AWAY FROM THE BORDER FIRES (?)
+RUN AWAY FROM BLASTS (they last for some ticks)
+DETECT WOOD BOXES (they might contain power ups)
+RIGHT NOW WE ARE NOT DETECTING IF THERE ARE ANY OBSTACLES WHEN CALCULATING DISTANCES
+
+
+FITNESS:
+---------------------------
+#Victories
+#Turns to win
+#Turns to lose
+
+
+ACTIONS:
+----------------------
+up
+down
+left
+right
+bomb
+detonate

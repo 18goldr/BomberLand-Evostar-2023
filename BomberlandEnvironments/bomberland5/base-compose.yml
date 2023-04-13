@@ -1,0 +1,78 @@
+version: "3"
+services:
+    game-engine:
+        image: coderone.azurecr.io/bomberland-engine:1878
+        volumes:
+            - ./agents/logs:/app/logs
+
+    go-agent:
+        build:
+            context: agents/go
+            dockerfile: Dockerfile
+
+    python3-agent:
+        build:
+            context: agents/python3
+            dockerfile: Dockerfile
+
+    python3-agent-dev:
+        build:
+            context: agents/python3
+            dockerfile: Dockerfile.dev
+        volumes:
+            - ./agents/python3:/app
+
+            
+    python3-agent-evolved-A:
+        build:
+            context: agents/python3
+            dockerfile: Dockerfile_evolved_A.dev
+        volumes:
+            - ./agents/python3:/app
+            
+    python3-agent-evolved-B:
+        build:
+            context: agents/python3
+            dockerfile: Dockerfile_evolved_B.dev
+        volumes:
+            - ./agents/python3:/app
+
+    python3-fwd:
+        build:
+            context: agents/python3
+            dockerfile: Dockerfile.fwd
+
+    python3-fwd-dev:
+        build:
+            context: agents/python3
+            dockerfile: Dockerfile.fwd.dev
+        volumes:
+            - ./agents/python3:/app
+    python3-gym-dev:
+        build:
+            context: agents/python3
+            dockerfile: Dockerfile.gym.dev
+        volumes:
+            - ./agents/python3:/app
+
+    typescript-agent:
+        build:
+            context: agents/typescript
+            dockerfile: Dockerfile
+
+    typescript-agent-dev:
+        build:
+            context: agents/typescript
+            dockerfile: Dockerfile.dev
+        volumes:
+            - ./agents/typescript:/app
+
+    cpp-agent:
+        build:
+            context: agents/cpp
+            dockerfile: Dockerfile
+
+    rust-agent:
+        build:
+            context: agents/rust
+            dockerfile: Dockerfile

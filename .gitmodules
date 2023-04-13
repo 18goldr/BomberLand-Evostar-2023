@@ -1,0 +1,3 @@
+[submodule "STGP-Sharp"]
+	path = STGP-Sharp
+	url = git@github.com:18goldr/STGP-Sharp.git
